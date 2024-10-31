@@ -3,8 +3,6 @@ Projeto Aula Testes Unitários | Banco-Usuarios
 
 Disciplina Engenharia de Software II
 
-Professora: Luciane Santos
-
 Curso Sistemas de Informação da FAI - 6º Período Noturno
 
 ## SETUP Instalação PyCharm
