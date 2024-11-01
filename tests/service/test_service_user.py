@@ -27,12 +27,28 @@ class TestServiceUser:
         result = service.add_user(name=name_fail, job=job_fail)
         assert result_expect == result
 
-    def test_add_user_without_name_or_job(self):
-        name_null = 123
-        job_null = 458
+    def test_add_user_name_and_job_wrong(self):
+        name_wrong = 123
+        job_wrong= 789
         result_expect = 'Nome ou Profissão precisa ser um texto'
         service = ServiceUser()
-        result = service.add_user(name=name_null, job=job_null)
+        result = service.add_user(name=name_wrong, job=job_wrong)
+        assert result_expect == result    
+
+    def test_add_user_name_wrong(self):
+        name_wrong = 123
+        job_valid= 'TI'
+        result_expect = 'Nome ou Profissão precisa ser um texto'
+        service = ServiceUser()
+        result = service.add_user(name=name_wrong, job=job_valid)
+        assert result_expect == result
+
+    def test_add_user_job_wrong(self):
+        name_valid = 'Marcela'
+        job_wrong = 458
+        result_expect = 'Nome ou Profissão precisa ser um texto'
+        service = ServiceUser()
+        result = service.add_user(name=name_valid, job=job_wrong)
         assert result_expect == result
 
     def test_validate_null_job(self):
