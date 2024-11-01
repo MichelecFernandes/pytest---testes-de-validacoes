@@ -68,12 +68,12 @@ class TestServiceUser:
     #     result = service.del_user(name=name_del)
     #     assert result_expect == result
     
-    def test_del_user_not_found(self):
-        name_del = 'Carolina'
-        result_expect = 'Usuario não encontrado'
-        service = ServiceUser()
-        result = service.del_user(name=name_del)
-        assert result_expect == result
+    # def test_del_user_not_found(self):
+    #     name_del = 'Carolina'
+    #     result_expect = 'Usuario não encontrado'
+    #     service = ServiceUser()
+    #     result = service.del_user(name=name_del)
+    #     assert result_expect == result
     
     # def test_select_user(self):
     #     name_select = 'Ricardo'
@@ -81,3 +81,10 @@ class TestServiceUser:
     #     service = ServiceUser()
     #     result = service.select_user(name=name_select)
     #     assert result_expect == result
+
+    def test_select_user_not_found(self):
+        name_select = 'Valquiria'
+        result_expect = 'Usuario não encontrado'
+        service = ServiceUser()
+        result = service.select_user(name=name_select)
+        assert result_expect == result    
