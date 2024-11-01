@@ -42,8 +42,8 @@ class TestServiceUser:
     #     service = ServiceUser()
     #     result = service.add_user(name=name_null, job=job_null)
     #     assert result_expect == result
-    #
-    #
+    
+    
     # def test_user_update(self):
     #     name_update = 'Carlos'
     #     job_update = 'Carpinteiro'
@@ -51,15 +51,33 @@ class TestServiceUser:
     #     service = ServiceUser()
     #     result = service.update_user(name=name_update, new_job=job_update)
     #     assert result_expect == result
-    #
+    
+
+    def test_user_update_not_found(self):
+        name_update = 'Flora'
+        job_update = 'Carpinteiro'
+        result_expect = 'Usuario não encontrado'
+        service = ServiceUser()
+        result = service.update_user(name=name_update, new_job=job_update)
+        assert result_expect == result
+
+
+
+
+
+
+
+
+
+
     # def test_del_user(self):
     #     name_del = 'Ana'
     #     result_expect = 'Usuario removido'
     #     service = ServiceUser()
     #     result = service.del_user(name=name_del)
     #     assert result_expect == result
-    #
-    #
+    
+    
     # def test_select_user(self):
     #     name_select = 'Ricardo'
     #     result_expect = 'Profissão: Cibersegurança'
